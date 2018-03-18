@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -33,7 +32,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-dA-yut">
                                         <rect key="frame" x="20" y="20" width="195" height="260"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, July 21, 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-22-IWR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, July 21, 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="kwi-22-IWR">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="48"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +55,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="z8C-3e-AZp">
                                         <rect key="frame" x="235" y="32" width="120" height="248"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3Q-gU-eSm">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3Q-gU-eSm">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="33P-Q5-AAd"/>
@@ -87,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="300" width="375" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="bvp-im-rPL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="bvp-im-rPL" customClass="WeatherCell" customModule="RainyShinyCloudy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bvp-im-rPL" id="JNK-nM-kaF">
@@ -164,6 +163,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.84065755210000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="hgc-Ou-NEL" firstAttribute="centerY" secondItem="JNK-nM-kaF" secondAttribute="centerY" id="2XA-Fe-sKy"/>
                                                 <constraint firstItem="hgc-Ou-NEL" firstAttribute="leading" secondItem="JNK-nM-kaF" secondAttribute="leading" constant="5" id="AzA-ig-HzG"/>
@@ -173,6 +173,14 @@
                                                 <constraint firstAttribute="bottom" secondItem="hgc-Ou-NEL" secondAttribute="bottom" constant="5" id="RiU-lF-Lrd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="yXu-Xl-I0P" id="DrA-8C-rnm"/>
+                                            <outlet property="highTemp" destination="Nhz-iR-YWw" id="j87-Zf-U8W"/>
+                                            <outlet property="lowTemp" destination="EX9-Zv-kBP" id="Egx-74-SvS"/>
+                                            <outlet property="weatherIcon" destination="gBk-IU-V4G" id="fjB-7F-Xh2"/>
+                                            <outlet property="weatherType" destination="FKo-W9-WfQ" id="l3p-og-qMl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -193,7 +201,7 @@
                         <outlet property="currentTemperatureLabel" destination="KRV-nS-q6Q" id="EDs-ix-hrU"/>
                         <outlet property="currentWeatherImage" destination="n3Q-gU-eSm" id="DTJ-iC-ceq"/>
                         <outlet property="currentWeatherTypeLabel" destination="VBU-OO-GRv" id="q0i-dG-gY6"/>
-                        <outlet property="dayLabel" destination="kwi-22-IWR" id="Rke-7r-lth"/>
+                        <outlet property="dateLabel" destination="kwi-22-IWR" id="Rke-7r-lth"/>
                         <outlet property="locationLabel" destination="IlF-VY-GEE" id="ihg-fY-WmK"/>
                         <outlet property="tableView" destination="dKI-7p-DaS" id="9ew-KA-Gsu"/>
                     </connections>
