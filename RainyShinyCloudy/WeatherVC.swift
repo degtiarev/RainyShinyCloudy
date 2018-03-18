@@ -28,8 +28,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     
     // location
     let locationManager = CLLocationManager()
-    var currentLocation: CLLocation!
-    
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,17 +45,14 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        
     }
     
     
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            currentLocation = locationManager.location
-            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            let currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation?.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation?.coordinate.longitude
             
             currentWeather.downloadWeatherDetails {
                 self.downloadForecastData {
@@ -94,7 +90,6 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             
         }
         
-        
     }
     
     
@@ -120,14 +115,12 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
     }
     
-    
     func updateMainUI() {
         dateLabel.text = currentWeather.date
         currentTemperatureLabel.text = "\(currentWeather.currentTemp)°"
         locationLabel.text = currentWeather.cityName
         currentWeatherTypeLabel.text = currentWeather.weatherType
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
-        
     }
     
 }
