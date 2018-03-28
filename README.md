@@ -1,6 +1,6 @@
 # RainyShinyCloudy
 
-Single View app for getting local weather forecasts using https://openweathermap.org/api for getting data.
+Single View app for receiving local weather forecasts using https://openweathermap.org/api for getting data.
 
 # Screenshots
 
