@@ -13,8 +13,6 @@
 		DC6DE2A9205B4F22004103AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6DE2A7205B4F22004103AA /* Main.storyboard */; };
 		DC6DE2AB205B4F22004103AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6DE2AA205B4F22004103AA /* Assets.xcassets */; };
 		DC6DE2AE205B4F22004103AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC6DE2AC205B4F22004103AA /* LaunchScreen.storyboard */; };
-		DC6DE2B9205B4F22004103AA /* RainyShinyCloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DE2B8205B4F22004103AA /* RainyShinyCloudyTests.swift */; };
-		DC6DE2C4205B4F22004103AA /* RainyShinyCloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6DE2C3205B4F22004103AA /* RainyShinyCloudyUITests.swift */; };
 		DC97802B205C4B8B00F9FE2D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC97802A205C4B8B00F9FE2D /* Constants.swift */; };
 		DC97802D205C514000F9FE2D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC97802C205C514000F9FE2D /* CurrentWeather.swift */; };
 		DCCB8B2D205D80D100C1549B /* Forcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCB8B2C205D80D100C1549B /* Forcast.swift */; };
@@ -52,11 +50,7 @@
 		DC6DE2AD205B4F22004103AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC6DE2AF205B4F22004103AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6DE2B4205B4F22004103AA /* RainyShinyCloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainyShinyCloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC6DE2B8205B4F22004103AA /* RainyShinyCloudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainyShinyCloudyTests.swift; sourceTree = "<group>"; };
-		DC6DE2BA205B4F22004103AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6DE2BF205B4F22004103AA /* RainyShinyCloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainyShinyCloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC6DE2C3205B4F22004103AA /* RainyShinyCloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainyShinyCloudyUITests.swift; sourceTree = "<group>"; };
-		DC6DE2C5205B4F22004103AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC97802A205C4B8B00F9FE2D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC97802C205C514000F9FE2D /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		DCCB8B2C205D80D100C1549B /* Forcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forcast.swift; sourceTree = "<group>"; };
@@ -103,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				DC6DE2A2205B4F22004103AA /* RainyShinyCloudy */,
-				DC6DE2B7205B4F22004103AA /* RainyShinyCloudyTests */,
-				DC6DE2C2205B4F22004103AA /* RainyShinyCloudyUITests */,
 				DC6DE2A1205B4F22004103AA /* Products */,
 				E73787303867F1001F58B0CC /* Pods */,
 				BF6114FF045782A3F80C6DED /* Frameworks */,
@@ -124,37 +116,59 @@
 		DC6DE2A2205B4F22004103AA /* RainyShinyCloudy */ = {
 			isa = PBXGroup;
 			children = (
-				DC6DE2A3205B4F22004103AA /* AppDelegate.swift */,
-				DC6DE2A5205B4F22004103AA /* WeatherVC.swift */,
-				DC6DE2A7205B4F22004103AA /* Main.storyboard */,
-				DC6DE2AA205B4F22004103AA /* Assets.xcassets */,
-				DC6DE2AC205B4F22004103AA /* LaunchScreen.storyboard */,
-				DC6DE2AF205B4F22004103AA /* Info.plist */,
-				DC97802A205C4B8B00F9FE2D /* Constants.swift */,
-				DC97802C205C514000F9FE2D /* CurrentWeather.swift */,
-				DCCB8B2C205D80D100C1549B /* Forcast.swift */,
-				DCCB8B2E205DD8D400C1549B /* WeatherCell.swift */,
-				DCCB8B30205DEC7200C1549B /* Location.swift */,
+				DCDBB83F206B6A71005F4528 /* Sources */,
+				DCDBB840206B6B1A005F4528 /* Services */,
+				DCDBB83D206B6A5C005F4528 /* View */,
+				DCDBB83C206B6A55005F4528 /* Model */,
+				DCDBB83E206B6A64005F4528 /* Controller */,
 			);
 			path = RainyShinyCloudy;
 			sourceTree = "<group>";
 		};
-		DC6DE2B7205B4F22004103AA /* RainyShinyCloudyTests */ = {
+		DCDBB83C206B6A55005F4528 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DC6DE2B8205B4F22004103AA /* RainyShinyCloudyTests.swift */,
-				DC6DE2BA205B4F22004103AA /* Info.plist */,
+				DC97802C205C514000F9FE2D /* CurrentWeather.swift */,
+				DCCB8B2C205D80D100C1549B /* Forcast.swift */,
+				DCCB8B30205DEC7200C1549B /* Location.swift */,
 			);
-			path = RainyShinyCloudyTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		DC6DE2C2205B4F22004103AA /* RainyShinyCloudyUITests */ = {
+		DCDBB83D206B6A5C005F4528 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC6DE2C3205B4F22004103AA /* RainyShinyCloudyUITests.swift */,
-				DC6DE2C5205B4F22004103AA /* Info.plist */,
+				DCCB8B2E205DD8D400C1549B /* WeatherCell.swift */,
+				DC6DE2A7205B4F22004103AA /* Main.storyboard */,
+				DC6DE2AC205B4F22004103AA /* LaunchScreen.storyboard */,
 			);
-			path = RainyShinyCloudyUITests;
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCDBB83E206B6A64005F4528 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC6DE2A3205B4F22004103AA /* AppDelegate.swift */,
+				DC6DE2A5205B4F22004103AA /* WeatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DCDBB83F206B6A71005F4528 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC6DE2AA205B4F22004103AA /* Assets.xcassets */,
+				DC6DE2AF205B4F22004103AA /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DCDBB840206B6B1A005F4528 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC97802A205C4B8B00F9FE2D /* Constants.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E73787303867F1001F58B0CC /* Pods */ = {
@@ -371,7 +385,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6DE2B9205B4F22004103AA /* RainyShinyCloudyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6DE2C4205B4F22004103AA /* RainyShinyCloudyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8822C26BQ;
-				INFOPLIST_FILE = RainyShinyCloudy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RainyShinyCloudy/Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = delexa.RainyShinyCloudy;
@@ -549,7 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8822C26BQ;
-				INFOPLIST_FILE = RainyShinyCloudy/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RainyShinyCloudy/Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = delexa.RainyShinyCloudy;
